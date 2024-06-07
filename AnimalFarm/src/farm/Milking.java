@@ -20,12 +20,12 @@ public abstract class Milking extends Animal implements Milky{
 
     public boolean progress()
     {
-        if(/*!milkingFlag*/){
-            return false;
-        }else
-        {
-            return true;
-        }
+//        if(/*!milkingFlag*/){
+//            return false;
+//        }else
+//        {
+//            return true;
+//        }
         while(quantity >= 0 /*&& milkingFlag*/) {
             quantity -= 0.07 * quantity;
             try {
@@ -37,7 +37,7 @@ public abstract class Milking extends Animal implements Milky{
                 return true;
             }
         }
-
+        return false;
     }
 
     public boolean stop()
