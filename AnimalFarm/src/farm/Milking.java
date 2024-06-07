@@ -14,17 +14,35 @@ public abstract class Milking extends Animal implements Milky{
     public double getMaxQuantity() {  return maxQuantity; }
     public boolean start()
     {
-        
+        //sets milking flag to true
         return true;
     }
 
     public boolean progress()
     {
-        return false;
+        if(/*!milkingFlag*/){
+            return false;
+        }else
+        {
+            return true;
+        }
+        while(quantity >= 0 /*&& milkingFlag*/) {
+            quantity -= 0.07 * quantity;
+            try {
+                Thread.sleep(300);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            if (true){
+                return true;
+            }
+        }
+
     }
 
     public boolean stop()
     {
+        //sets milking flag to false
         return false;
     }
 }
