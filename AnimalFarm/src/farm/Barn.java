@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Set;
 
 public class Barn extends Building{
-    private Set<Cage> cages = new HashSet<>();//initialize ?????
+    private Set<Cage> cages = new HashSet<>();
     public Barn(double width, double length, double height) {
         super(width, length, height);
 
